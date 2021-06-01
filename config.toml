@@ -1,7 +1,0 @@
-baseURL = "https://marimo-kd.github.io/"
-languageCode = "ja-jp"
-title = "My New Hugo Site"
-theme = "PaperMod"
-
-[minify]
-disableJSON = true

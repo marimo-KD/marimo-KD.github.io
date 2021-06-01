@@ -1,0 +1,16 @@
+baseURL: "https://marimo-kd.github.io/"
+languageCode: "ja-jp"
+title: "My New Hugo Site"
+theme: "PaperMod"
+
+params:
+  defaultTheme: light
+  homeInfoParams:
+    Title: marimo's blog
+    Content: marimoのブログです。いろいろある予定です。
+    
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/MMARIMO0o"
+    - name: github
+      url: "https://github.com/marimo-KD"
