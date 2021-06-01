@@ -16,3 +16,6 @@ params:
       url: "https://github.com/marimo-KD"
 
   ShowShareButtons: true
+  ShowReadintTime: true
+  ShowToc: true
+  enableInlineShortcodes: true
