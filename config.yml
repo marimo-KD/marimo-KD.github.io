@@ -19,3 +19,10 @@ params:
   ShowReadintTime: true
   ShowToc: true
   enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
