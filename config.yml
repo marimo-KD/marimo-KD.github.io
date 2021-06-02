@@ -1,6 +1,6 @@
 baseURL: "https://marimo-kd.github.io/"
 languageCode: "ja-jp"
-title: "My New Hugo Site"
+title: "Marimo's website"
 theme: "PaperMod"
 
 params:
