@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>文字列 on marimo's blog</title><link>https://marimo-kd.github.io/tags/%E6%96%87%E5%AD%97%E5%88%97/</link><description>Recent content in 文字列 on marimo's blog</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 25 Dec 2021 19:18:46 +0900</lastBuildDate><atom:link href="https://marimo-kd.github.io/tags/%E6%96%87%E5%AD%97%E5%88%97/index.xml" rel="self" type="application/rss+xml"/><item><title>SA-IS</title><link>https://marimo-kd.github.io/posts/sa-is/</link><pubDate>Sat, 25 Dec 2021 19:18:46 +0900</pubDate><guid>https://marimo-kd.github.io/posts/sa-is/</guid><description>SA-IS SA-IS(Suffix Array - Induced Sorting)をお勉強しました。 Suffix Array(SA)を線形時間で構築できるすごいやつです。 厳密な証明はめんどくさいので、省略！ｗ
+アルゴリズムの概要 だいたい5段階から成ります。
+LMSを求める (未ソートの)LMSを使ってInduced SortしてLMS-substringをソート LMS-substring列を構成し、そのSAを構築(再帰) できたSAからLMSをソート ソートしたLMSを使ってInduced Sort 定義 未定義の言葉が沢山あるので、定義しておきます。 文字列は終端文字があるとします。
+LとS 文字列\( T \)に対して、
+\( T_i &amp;lt; T_{i+1} \)のとき、\( i \)をS-type(Smaller)、
+\( T_i &amp;gt; T_{i+1} \) のとき、\( i \)をL-type(Larger)、
+と呼びます。
+\( T_i = T_{i+1} \)のときは、\( i \)のS/Lは、\( i+1 \)と等しいとします。 終端はSであると取り決めます。
+LMS \( i-1 \)がLで\( i \)がSであるような\( i \)のことをLMS(Left-Most S)と呼びます。 以降、LMSと言ったときにインデックスのことだけでなく、そこから定まるsuffixを指すこともあります。 終端はLMSであると取り決めます。
+LMS-substring となり合うLMSの間の連続部分文字列です。 すなわち、\( i,j \)がLMSであって、全ての\( i &amp;lt; k &amp;lt; j \)がLMSでないようなもので、 \( S_{i.</description></item></channel></rss>
