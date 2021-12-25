@@ -6,12 +6,11 @@ math: true
 tags: ["計算機科学", "アルゴリズム", "algorithm", "文字列"]
 ---
 
-# SA-IS
 SA-IS(Suffix Array - Induced Sorting)をお勉強しました。
 Suffix Array(SA)を線形時間で構築できるすごいやつです。
 厳密な証明はめんどくさいので、省略！ｗ
 
-## アルゴリズムの概要
+# アルゴリズムの概要
 だいたい5段階から成ります。
 1. LMSを求める
 2. (未ソートの)LMSを使ってInduced SortしてLMS-substringをソート
@@ -19,29 +18,29 @@ Suffix Array(SA)を線形時間で構築できるすごいやつです。
 4. できたSAからLMSをソート
 5. ソートしたLMSを使ってInduced Sort
 
-### 定義
+## 定義
 未定義の言葉が沢山あるので、定義しておきます。
 文字列は終端文字があるとします。
-#### LとS
+### LとS
 文字列\\( T \\)に対して、  
 \\( T_i < T_{i+1} \\)のとき、\\( i \\)をS-type(Smaller)、  
 \\( T_i > T_{i+1} \\) のとき、\\( i \\)をL-type(Larger)、  
 と呼びます。  
 \\( T_i = T_{i+1} \\)のときは、\\( i \\)のS/Lは、\\( i+1 \\)と等しいとします。
 終端はSであると取り決めます。
-#### LMS
+### LMS
 \\( i-1 \\)がLで\\( i \\)がSであるような\\( i \\)のことをLMS(Left-Most S)と呼びます。
 以降、LMSと言ったときにインデックスのことだけでなく、そこから定まるsuffixを指すこともあります。
 終端はLMSであると取り決めます。
-#### LMS-substring
+### LMS-substring
 となり合うLMSの間の連続部分文字列です。
 すなわち、\\( i,j \\)がLMSであって、全ての\\( i < k < j \\)がLMSでないようなもので、
 \\( S_{i..j} \\)なる部分列のこと。
-#### LMS-substring列
+### LMS-substring列
 これは一般的でない言葉だと思います。
 LMS-substringを辞書順で昇順に番号をつけて、もとの文字列に登場する順番で並べたものです。
 
-## Induced Sort
+# Induced Sort
 名前にもなっているようにこれがキモ。
 文字列と、そのLMSの並びが与えられたときに、
 1. LMSの初めの文字でバケットソート
@@ -53,7 +52,7 @@ LMS-substringを辞書順で昇順に番号をつけて、もとの文字列に�
 二段階ソートは、LとSに分けたあと、Sだけソートすれば、2と同じ手順によってLも含めてソートできるというやつ。
 一つ前がLのものだけ興味があるのでLMSだけ見ればいいじゃない、という話になる。
 
-## 一体何が起こるのか
+# 一体何が起こるのか
 ここでアルゴリズムの概要を再掲。
 1. LMSを求める
 2. (未ソートの)LMSを使ってInduced SortしてLMS-substringをソート
@@ -72,12 +71,12 @@ LMSをソートするには、LMS-substring列のSAを構築すればよい。(�
 
 また、LMS-substringに重複がなければ、LMS-substringをソートしたらLMSもソートできるので再帰をサボれる。
 
-## 計算量
+# 計算量
 再帰パート以外は割と明らかに線形なので、再帰のところだけ問題になります。
 LMS-substringは必ず長さ3以上なので(終端を除き)、LMS-substring列は長さが元のやつの3分の1程度になるはずです。
 そのため、計算量が等比級数になって、線形時間であることがわかります。
 
-## 元論文
+# 元論文
 [Two Efficient Algorithms for Linear Time Suffix Array Construction](https://ieeexplore.ieee.org/document/5582081)
 
 とても頭のよさそうな実装も載っています。
